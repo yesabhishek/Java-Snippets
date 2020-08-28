@@ -1,0 +1,89 @@
+class GrandParent{
+	
+	String name;
+	int age;
+	long assets;
+	int childrens;
+	
+	GrandParent(String Name, int years, long income, int liablity ){
+		
+		name = Name;
+		age = years;
+		assets = income;
+		childrens = liablity;
+		
+	}
+	
+	void print() {
+		
+		System.out.println("Name: "+name);
+		System.out.println("Age: "+age);
+		System.out.println("Assets left: "+assets);
+		System.out.println("Childrens I have: "+childrens);
+		
+	}
+	
+}
+
+class Parent extends GrandParent{
+	
+	long total_worth;
+	
+	Parent(String Name, int years, long income, int liablity) {
+		
+		super(Name, years, income, liablity);
+		total_worth = this.assets + income;
+		
+	}
+	
+	void print_parent() {
+		
+		System.out.println("Name: "+name);
+		System.out.println("Age: "+age);
+		System.out.println("Assets left: "+assets);
+		System.out.println("Total Worth: "+total_worth);
+		System.out.println("Childrens I have: "+childrens);
+	
+	}
+
+}
+
+class Children extends Parent{
+	
+	long total_worth;
+	
+	Children(String Name, int years, long income, int liablity) {
+		
+		super(Name, years, income, liablity);
+		total_worth = income + this.assets;
+		
+	}
+
+	void print_child() {
+		
+		System.out.println("Name: "+name);
+		System.out.println("Age: "+age);
+		System.out.println("Assets left: "+assets);
+		System.out.println("Total Worth: "+total_worth);
+		System.out.println("Childrens I have: "+childrens);
+		
+	}
+
+}
+
+public class Family_Heirarchy {
+
+	public static void main(String[] args) {
+		
+
+		GrandParent g0 = new GrandParent("kamlesh", 65, 30, 4);
+		g0.print();
+		System.out.print("-------------------------------------------------\n");
+		Parent g1 = new Parent("Asim", 45, 20, 1);
+		g1.print_parent();
+		System.out.print("-------------------------------------------------\n");
+		Children g2 = new Children("Abhishek", 15, 5, 0);
+		g2.print_child();
+	}
+
+}

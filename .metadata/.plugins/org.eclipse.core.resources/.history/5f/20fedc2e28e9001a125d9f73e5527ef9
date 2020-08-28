@@ -1,0 +1,72 @@
+
+class GrandParent{
+	
+	String name;
+	int age;
+	long assets;
+	int childrens;
+	
+	GrandParent(String surname, int years, long income, int liablity ){
+		
+		name = surname;
+		age = years;
+		assets = income;
+		childrens = liablity;
+		
+	}
+	
+	void print() {
+		
+		System.out.println("Hello I am the GrandParent ");
+		System.out.println("Surname: "+name);
+		System.out.println("Age: "+age);
+		System.out.println("Assets left: "+assets);
+		System.out.println("Childrens I have: "+childrens);
+		
+	}
+	
+	
+}
+
+
+
+class Parent{
+	
+	String name;
+	String age;
+	long assets;
+	int childrens;
+	
+	void print() {
+		System.out.println("Hello I am the Parent ");
+	}
+	
+}
+
+
+
+class Children{
+	
+	String name;
+	String age;
+	long assets;
+	int childrens;
+	
+	void print() {
+		System.out.println("Hello I am the Childrens ");
+	}
+}
+
+
+
+
+public class Family_Heirarchy {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		GrandParent g = new GrandParent("Choudhury", 65, 500000, 4);
+		g.print();
+	}
+
+}

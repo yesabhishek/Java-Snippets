@@ -1,0 +1,44 @@
+
+public class Snippet 
+
+{
+	String name;
+	int salary;
+	int base;
+	String job_typ;
+	
+	Snippet(String emp_name,String emp_job_typ)
+	{
+		name = emp_name;
+		job_typ = emp_job_typ;
+		
+		if(job_typ.equals("SDE") == true) {
+			base = 10;
+		}
+		base = 20;
+		
+
+	}
+	
+
+	
+	void print() {
+		System.out.println("Name of the candidate: "+name);
+		System.out.println("Job type: "+job_typ);
+		System.out.println("The base salary is set as:"+base);
+	}
+
+	public static void main(String[] args) 
+	
+	
+	{
+		Snippet s = new Snippet("Aman", "SDE");
+		s.print();
+		System.out.print("\n");
+		Snippet s1 = new Snippet("Raju", "Architect");
+		s1.print();
+		
+
+	}
+
+}

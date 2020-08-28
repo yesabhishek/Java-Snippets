@@ -1,0 +1,26 @@
+
+public class Snippet 
+
+{
+	int a;
+	
+	Snippet(){
+		int a = 10;
+	}
+	
+	void print() {
+		System.out.print(a);
+	}
+
+	public static void main(String[] args) 
+	
+	
+	{
+		Snippet s = new Snippet();
+		s.print();
+		
+		System.out.print("Hey I am Back!");
+
+	}
+
+}

@@ -1,0 +1,114 @@
+
+class GrandParent{
+	
+	String name;
+	int age;
+	long assets;
+	int childrens;
+	
+	GrandParent(String surname, int years, long income, int liablity ){
+		
+		name = surname;
+		age = years;
+		assets = income;
+		childrens = liablity;
+		
+	}
+	
+	void print() {
+		
+		System.out.println("Hello I am the GrandParent ");
+		System.out.println("Surname: "+name);
+		System.out.println("Age: "+age);
+		System.out.println("Assets left: "+assets);
+		System.out.println("Childrens I have: "+childrens);
+		
+	}
+	
+	
+}
+
+
+
+class Parent extends GrandParent{
+	
+	Parent(String surname, int years, long income, int liablity) {
+		
+		super(surname, years, income, liablity);
+		
+	}
+	
+	void print_parent() {
+		
+		System.out.println("Hello I am the GrandParent ");
+		System.out.println("Surname: "+name);
+		System.out.println("Age: "+age);
+		System.out.println("Assets left: "+assets);
+		System.out.println("Childrens I have: "+childrens);
+		
+	}
+
+
+
+//	Assets will flow from Super Class
+	
+	String name;
+	String age;
+	int childrens;
+	int money;
+	
+	
+	
+	void print_child() {
+		
+		System.out.println("Hello I am the GrandParent ");
+		System.out.println("Surname: "+name);
+		System.out.println("Age: "+age);
+		System.out.println("Assets left: "+assets);
+		System.out.println("Childrens I have: "+childrens);
+		
+	}
+
+}
+
+
+
+class Children extends Parent{
+	
+	Children(String surname, int years, long income, int liablity) {
+		
+		super(surname, years, income, liablity);
+		
+	}
+
+//	Assets will flow from Super Class
+	
+	
+	String name;
+	String age;
+	int childrens;
+	
+	void print() {
+		System.out.println("Hello I am the Childrens ");
+	}
+}
+
+
+
+
+public class Family_Heirarchy {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		GrandParent g0 = new GrandParent("Choudhury", 65, 500000, 4);
+		g0.print();
+		System.out.print("-------------------------------------------------\n");
+		Parent g1 = new Parent("Choudhury", 45, 100000, 1);
+		g1.print_parent();
+		System.out.print("-------------------------------------------------\n");
+		Children g2 = new Children("Choudhury", 15, 15000, 0);
+		g2.print_child();
+	}
+
+}

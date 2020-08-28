@@ -1,0 +1,36 @@
+
+public class Snippet 
+
+{
+	String name;
+	int salary;
+	int base;
+	String job_typ;
+	
+	Snippet(String emp_name,String emp_job_typ)
+	{
+		base = 10;
+		name = emp_name;
+		job_typ = emp_job_typ;
+	}
+	
+
+	
+	void print() {
+		System.out.println(name);
+		System.out.println(job_typ);
+		System.out.println(base);
+	}
+
+	public static void main(String[] args) 
+	
+	
+	{
+		Snippet s = new Snippet("Aman", "SDE");
+		s.print();
+		
+		System.out.println("Hey I am Back!");
+
+	}
+
+}
