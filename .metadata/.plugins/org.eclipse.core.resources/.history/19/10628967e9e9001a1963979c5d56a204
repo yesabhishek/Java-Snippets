@@ -1,0 +1,24 @@
+
+
+
+class Manager{
+	
+}
+
+class Architect{
+	
+}
+
+class Developer{
+	
+}
+
+public class Employee {
+
+	public static void main(String[] args) 
+	{
+		
+
+	}
+
+}

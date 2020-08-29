@@ -1,32 +1,39 @@
 class A{
 	
-	protected int a = 10;
+	protected int a;
+	
+	A(int _a){
+		a = _a;
+	}
 }
 
 class B extends A{
 	
-	int b = 20;
+	int b;
 	
-}
-
-class C extends B{
+	B(int _a, int _b){
+		super(_a);
+		
+		b = _b;
+		a += 100;
+	}
 	
-	int c = 30;
-
 	void print() {
 		
-		System.out.println("a:"+a+", b:"+b+", c:"+c);
+		System.out.println(a+" "+b);
 	}
-
+	
 }
+
+
 
 
 public class Relationship {
 
 	public static void main(String[] args) {
 		
-		C c = new C();
-		c.print();
+		B b = new B(10,20);
+		b.print();
 	}
 
 }

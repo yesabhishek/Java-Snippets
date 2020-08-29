@@ -1,0 +1,34 @@
+class Operation{
+	
+	int square(int n) {
+		return n*n;
+	}
+}
+
+class Circle{
+	
+	Operation op;
+	double pi = 10;
+	
+	double area(int radius) {
+		
+		op = new Operation();
+		int rsquare = op.square(radius);
+		
+		return pi*rsquare;
+	}
+	
+	
+}
+
+public class Aggregation1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Circle c = new Circle();
+		System.out.print("Area:"+c.area(4));
+		
+	}
+
+}

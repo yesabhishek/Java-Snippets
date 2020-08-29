@@ -1,0 +1,19 @@
+class A{
+	A(){
+		System.out.print("I am inside the default constructor");
+	}
+	
+	A(int a){
+		this();
+		System.out.print("I am inside the parameterised Constructor");
+	}
+}
+public class This_Example2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		A a = new A(11);
+		
+	}
+
+}
