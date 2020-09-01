@@ -7,10 +7,12 @@ public class Test {
 	}
 	public void main() {
 		System.out.println("lol I just hacked JAVA");
+		
 	}
 	
 	public static void main(String [] args) {
 		
+
 		Test t = new Test();
 		t.main();
 		System.out.println("Printed the return value:"+t.main(10));

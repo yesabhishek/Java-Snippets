@@ -1,5 +1,7 @@
 class Address{
 
+	Integer results[ ] = {new Integer(3), new Integer(5), new Integer(8)};
+
 	String city, state, country;
 	
 	Address(String city, String state, String country){
